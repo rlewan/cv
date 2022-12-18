@@ -12,10 +12,10 @@ This is forked from [Awesome-CV](https://github.com/posquit0/Awesome-CV). Kudos 
 
 ### Building the PDFs
 
-Command below does the trick:
+Use the provided script as a wrapper around `make`, it will execute with the relevant Docker container:
 
 ```bash
-docker run --rm --user $(id -u):$(id -g) -i -w "/doc" -v "$PWD":/doc thomasweise/docker-texlive-full make
+./make.sh
 ```
 
 It uses a fully blown LaTex setup so the image is pretty hefty (~2GB).
