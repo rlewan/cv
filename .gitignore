@@ -10,6 +10,7 @@
 
 ## Build outputs
 *.pdf
+out/
 
 ## Intermediate documents:
 *.dvi
