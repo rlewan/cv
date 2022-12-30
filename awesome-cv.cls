@@ -653,6 +653,27 @@
   \end{tabular*}%
 }
 
+% Define an entry of cv information with multiple positions at one job
+% Usage: \multicventry{<title>}{<location>}{items}
+\newcommand*{\multicventry}[3]{
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#1} & \entrylocationstyle{#2} \\
+  \end{tabular*}
+  #3
+}
+
+% A single item for the above
+% Usage: \multicventryitem{<position>}{<date>}{<description>}
+\newcommand*{\multicventryitem}[3]{
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrypositionstyle{#1} & \entrydatestyle{#2} \\
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
+  \end{tabular*}
+}
+
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
   \begin{center}
