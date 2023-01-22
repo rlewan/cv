@@ -1,0 +1,16 @@
+name: Main
+on: workflow_dispatch
+jobs:
+  build:
+    name: Build the outputs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+      - name: Build
+        uses: addnab/docker-run-action@v3
+        with:
+          image: thomasweise/docker-texlive-full:2:0
+          options: --workdir '/doc' --volume ${{ github.workspace }}:/doc
+          run: |
+            make
