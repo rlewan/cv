@@ -4,13 +4,13 @@ jobs:
   build:
     name: Build the outputs
     runs-on: ubuntu-latest
+    container:
+      image: thomasweise/docker-texlive-full:2.0
+      options: --workdir '/doc'
+      volumes:
+        - ${{ github.workspace }}:/doc
     steps:
       - name: Check out
         uses: actions/checkout@v3
-      - name: Build
-        uses: docker://thomasweise/docker-texlive-full:2.0
-        with:
-          args: >-
-            --workdir '/doc'
-            --volume ${{ github.workspace }}:/doc
-            make
+      - name: Make
+        run: make
