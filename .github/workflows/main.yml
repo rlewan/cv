@@ -1,17 +1,17 @@
-name: Main
+name: Build the document(s)
 on: workflow_dispatch
 jobs:
   build:
-    name: Build the outputs
+    name: Compile and upload the document(s)
     runs-on: ubuntu-latest
     container:
       image: thomasweise/docker-texlive-full:2.0
     steps:
-      - name: Check out
+      - name: Check out latest source
         uses: actions/checkout@v3
-      - name: Make
+      - name: Compile LaTex files
         run: make
-      - name: Upload
+      - name: Upload created PDF(s)
         uses: actions/upload-artifact@v3
         with:
           name: resume.pdf
