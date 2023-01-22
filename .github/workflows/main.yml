@@ -8,7 +8,7 @@ jobs:
       - name: Check out
         uses: actions/checkout@v3
       - name: Build
-        uses: thomasweise/docker-texlive-full:2:0
+        uses: docker://thomasweise/docker-texlive-full:2:0
         with:
           args: >-
             --workdir '/doc'
