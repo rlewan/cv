@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: thomasweise/docker-texlive-full:2.0
-      options: --workdir '/doc'
+      options: --workdir /doc
       volumes:
         - ${{ github.workspace }}:/doc
     steps:
