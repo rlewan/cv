@@ -114,7 +114,8 @@
 \fancyhf{}
 % Enable if you want to make header or footer using fancyhdr
 \pagestyle{fancy}
-
+% Set the line spacing for the document (more info on this here: https://www.overleaf.com/learn/latex/Articles/How_to_change_paragraph_spacing_in_LaTeX#The_setspace_package)
+\onehalfspacing
 
 %-------------------------------------------------------------------------------
 %                Configuration for colors
