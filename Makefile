@@ -1,6 +1,6 @@
 .PHONY: all
 
-CC = xelatex
+CC = xelatex --halt-on-error
 SOURCES_DIR = src
 OUTPUTS_DIR = out
 RESUME_DIR = src/resume
