@@ -12,6 +12,12 @@ This is forked from [Awesome-CV](https://github.com/posquit0/Awesome-CV). Kudos 
 
 ### Building the PDFs
 
+#### GitHub
+
+[Here](https://github.com/rlewan/cv/actions/workflows/main.yml)'s the job to build them through GitHub actions.
+
+#### Locally
+
 Use the provided script as a wrapper around `make`, it will execute with the relevant Docker container:
 
 ```bash
